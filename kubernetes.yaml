@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: microservice
-        image: gcr.io/avid-glass-308113/microservice:b6f5a75
+        image: gcr.io/avid-glass-308113/microservice:5ab6dd7
         ports:
         - containerPort: 8080
 ---
