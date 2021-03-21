@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: microservice
-        image: gcr.io/absolute-broker-308222/microservice:ef39fed
+        image: gcr.io/absolute-broker-308222/microservice:30889cd
         ports:
         - containerPort: 8080
 ---
