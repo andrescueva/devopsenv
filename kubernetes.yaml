@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: microservice
-        image: gcr.io/project-backup-308223/microservice:e17c880
+        image: gcr.io/project-backup-308223/microservice:21b060e
         ports:
         - containerPort: 8080
 ---
