@@ -5,7 +5,7 @@ metadata:
   labels:
     app: microservice
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: microservice
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: microservice
-        image: gcr.io/avid-glass-308113/microservice:5ab6dd7
+        image: gcr.io/absolute-broker-308222/microservice:ef39fed
         ports:
         - containerPort: 8080
 ---
