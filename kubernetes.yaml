@@ -16,14 +16,14 @@ spec:
     spec:
       containers:
       - name: microservice
-        image: gcr.io/project-backup-308223/microservice:ea22832
+        image: gcr.io/project-backup-308223/microservice:b42460d
         ports:
         - containerPort: 8080
         resources:
           limits:
-            cpu: "250m"
-          requests:
             cpu: "150m"
+          requests:
+            cpu: "100m"
 ---
 kind: Service
 apiVersion: v1
