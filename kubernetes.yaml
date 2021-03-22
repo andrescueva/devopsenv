@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: microservice
-        image: gcr.io/project-backup-308223/microservice:ca899b1
+        image: gcr.io/project-backup-308223/microservice:f57de4b
         ports:
         - containerPort: 8080
         resources:
@@ -35,3 +35,16 @@ spec:
     port: 80
     targetPort: 8080
   type: LoadBalancer
+---
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: microservice
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: microservice
+  minReplicas: 1
+  maxReplicas: 4
+  targetCPUUtilizationPercentage: 50
